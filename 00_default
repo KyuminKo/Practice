@@ -1,0 +1,27 @@
+//*******************************************************************
+// Welcome to CompileJava!
+// If you experience any issues, please contact us ('More Info')  -->
+//*******************************************************************
+
+import java.lang.Math; // headers MUST be above the first class
+import java.util.*;
+
+// one class needs to have a main() method
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    Solution sol = new Solution();
+    System.out.print(sol.solution());
+  }
+}
+
+// you can add other public classes to this editor in any order
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        String result = "";
+      	
+        return result;
+    }
+}
