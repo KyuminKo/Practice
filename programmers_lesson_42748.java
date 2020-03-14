@@ -24,21 +24,14 @@ public class HelloWorld
 // you can add other public classes to this editor in any order
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
-        int[] result = new int[commands[0].length];
-      	
+        int[] result = new int[commands.length];
+        int[] temp = {};
         // running all commands
-        for (int i=0; i<commands[0].length; i++){
-        	result[i] = getNumber(array, commands[i][0], commands[i][1], commands[i][2]);
+        for (int i=0; i<commands.length; i++){
+          temp = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+          Arrays.sort(temp);
+          result[i] = temp[commands[i][2]-1];
         }
         return result;
-    }
-    public int getNumber(int[] array, int i, int j, int k){
-      int[] temp = new int[j-i+1];
-      for(int m=0; m<temp.length; m++){
-         temp[m] = array[i-1];
-         i++;
-      }
-      Arrays.sort(temp);
-      return temp[k-1];
     }
 }
